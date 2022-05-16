@@ -1,1 +1,0 @@
-web: gunicorn quotes_api.wsgi
