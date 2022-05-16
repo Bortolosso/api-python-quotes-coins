@@ -6,6 +6,7 @@ ________________________________________________________________________________
 ##### Pre-requisitos:
 - Python **3.8.5**
 - pip **20.1.1**
+- docker-compose
 
 1. Esteja no diretorio **raiz** do projeto.
 
