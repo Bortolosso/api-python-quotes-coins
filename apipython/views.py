@@ -115,6 +115,19 @@ def lapid_array(actual_value_coins, bases, dates_array):
             list_coins_values["euro"] = array_values_coins_eur
             list_coins_values["iene"] = array_values_coins_jpy
         payload[base] = list_coins_values
-    payload["series_date"] = dates_array
+        
+    payload["series_date"] = formating_date(dates_array)
 
     return payload
+
+def formating_date(dates_array):
+    """
+    Formata a data para o padrão Brasil
+    """
+    format_date = []
+    for i in dates_array:
+        original_date = datetime.strptime(i, '%Y-%m-%d')
+        formatted_date = original_date.strftime("%d/%m/%Y")
+        format_date.append(formatted_date)
+        
+    return format_date
