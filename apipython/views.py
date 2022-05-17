@@ -99,21 +99,21 @@ def lapid_array(actual_value_coins, bases, dates_array):
                 array_values_coins_eur.append(position_dict[1])
                 array_values_coins_jpy.append(position_dict[2])
         if base == "USD":
-            list_coins_values["euro"] = array_values_coins_eur
-            list_coins_values["iene"] = array_values_coins_jpy
-            list_coins_values["real"] = array_values_coins_brl
+            list_coins_values["EUR"] = array_values_coins_eur
+            list_coins_values["JPY"] = array_values_coins_jpy
+            list_coins_values["BRL"] = array_values_coins_brl
         if base == "EUR":
-            list_coins_values["dolar"] = array_values_coins_usd
-            list_coins_values["iene"] = array_values_coins_jpy
-            list_coins_values["real"] = array_values_coins_brl
+            list_coins_values["USD"] = array_values_coins_usd
+            list_coins_values["JPY"] = array_values_coins_jpy
+            list_coins_values["BRL"] = array_values_coins_brl
         if base == "JPY":
-            list_coins_values["dolar"] = array_values_coins_usd
-            list_coins_values["euro"] = array_values_coins_eur
-            list_coins_values["real"] = array_values_coins_brl
+            list_coins_values["USD"] = array_values_coins_usd
+            list_coins_values["EUR"] = array_values_coins_eur
+            list_coins_values["BRL"] = array_values_coins_brl
         if base == "BRL":
-            list_coins_values["dolar"] = array_values_coins_usd
-            list_coins_values["euro"] = array_values_coins_eur
-            list_coins_values["iene"] = array_values_coins_jpy
+            list_coins_values["USD"] = array_values_coins_usd
+            list_coins_values["EUR"] = array_values_coins_eur
+            list_coins_values["JPY"] = array_values_coins_jpy
         payload[base] = list_coins_values
         
     payload["series_date"] = formating_date(dates_array)
