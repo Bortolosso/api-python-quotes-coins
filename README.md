@@ -1,4 +1,9 @@
-# api-python-mongo
+# api-python-cotação-de-moedas
+##### usd | eur | jpy | brl:
+
+Provider in Heroku:
+
+Api Restfull Heroku-> [https://queotes-api.herokuapp.com/](https://queotes-api.herokuapp.com/)
 
 ___________________________________________________________________________________
 
@@ -10,28 +15,15 @@ ________________________________________________________________________________
 
 1. Esteja no diretorio **raiz** do projeto.
 
-2. Inicialize e ative sua maquína virtual:
+Autorize a pasta /data:
+- $ sudo chown -R $USER:$USER data  
 
-**Windows:**
-- (Cria maquina virtual) Rode o comando -> $ **_python -m venv env_**
-- (Inicia maquina virtual) Rode o comando -> $ **_.\env\Scripts\activate_**
+2. Inicialize e ative seu container com docker-compose:
+- $ docker-compose build
+- $ docker-compose up -d || docker-compose down && docker-compose up  
 
-**Macos:** 
-- (Cria maquina virtual) Rode o comando -> $ **_python -m venv env_**
-- (Inicia maquina virtual) Rode o comando -> $ **_source env/bin/activate_**
+Api Restfull Local-> [localhost:8000](localhost:8000)
 
-**Linux:**
-- (Cria maquina virtual) Rode o comando -> $ **_python3 -m venv env_**
-- (Inicia maquina virtual) Rode o comando -> $ **_source env/bin/activate_**
-
-3. Instale todas as depedencias e bibliotecas do projeto com o comando:
-
-- **Windowns, MacOs, Linux** -> $ **_pip install -r requirements.txt_**
-
-4. Rode a API com o comando -> $ **_python app/main.py_**
-
-Api Restfull -> [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
-Documentação da API(SWAGGER) -> [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+Api Restfull Heroku-> [https://queotes-api.herokuapp.com/](https://queotes-api.herokuapp.com/)
 
 ___________________________________________________________________________________
